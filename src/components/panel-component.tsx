@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from '@material-ui/core';
-import Alert from '@material-ui/lab/Alert';
 
 interface Props {
     children?: any;
@@ -16,7 +15,7 @@ export default class PanelComponent extends React.Component<Props> {
                     aria-controls="panel1a-content"
                     id="panel1a-header">
                     <Typography>
-                        <Alert severity="info">{this.props.title}</Alert>
+                        {this.props.title}
                     </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>

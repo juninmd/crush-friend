@@ -75,7 +75,7 @@ export default class Home extends React.Component<Props> {
 
             <div>
               <FormControl fullWidth={true}>
-                <label>Selecione os itens que te agradam:</label>
+                <label>Selecione o que você gosta:</label>
               </FormControl>
               <CheckBoxComponent checkboxes={items} onChange={handleChecked} />
             </div>

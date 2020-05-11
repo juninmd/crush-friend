@@ -9,6 +9,7 @@ import CheckBoxComponent from '../../components/checkbox-component';
 import { items } from '../../const/items-const'
 import { inject, observer } from 'mobx-react';
 import HomeStore from './store';
+import Alert from '@material-ui/lab/Alert';
 
 interface Props {
   home: HomeStore;
@@ -90,13 +91,18 @@ export default class Home extends React.Component<Props> {
                   <Button onClick={() => friend()} variant="contained" color="secondary">Friend</Button>
                 </ButtonGroup>
               </FormControl>
+              <div>
+                <Alert severity="info">
+                  Sua privacidade será mantida, nenhum dado aqui será divulgado ou compartilhado.
+                </Alert>
+              </div>
             </div>
             <br />
 
           </PaperComponent>
 
           <div>
-            <PanelComponent title="Sobre esse site" description="É um facilitador para possíveis namoros, sendo mais direto e objetivo que redes sociais como Tinder." />
+            <PanelComponent title="Sobre esse site" description="Decidi criar um tinder pessoal, onde eu sou o único usuário, feito apenas para diversão HAHAHAHAHAHAH" />
           </div>
 
         </Fragment>

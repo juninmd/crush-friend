@@ -34,7 +34,7 @@ export default class ProfileComponent extends React.Component<Props> {
             </div>
           </Grid>
           <Grid item xs={8}>
-            <Alert severity="info">
+            <Alert severity="success">
               Aqui é a área da biografia, onde devemos escrever coisas bonitas e divertidas paras as pessoas lerem.
               Mas como esse site é só uma brincadeira, vou encher aqui de mensagens aleatórias...
               <br />

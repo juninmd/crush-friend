@@ -37,6 +37,8 @@ export default class ProfileComponent extends React.Component<Props> {
             <Alert severity="info">
               Aqui é a área da biografia, onde devemos escrever coisas bonitas e divertidas paras as pessoas lerem.
               Mas como esse site é só uma brincadeira, vou encher aqui de mensagens aleatórias...
+              <br />
+              Não tenho físico de atelta +
                             <br />
                             Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais,
                             das professoras, mas também é o dia dos animais, sempre que você olha uma criança,

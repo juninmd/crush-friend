@@ -1,4 +1,5 @@
 import { action, observable, toJS } from 'mobx';
+import { postMessage } from '../../api/crush-friend.api'
 
 export default class HomeStore {
   @observable form: { [x: string]: any, about: string, twitter: string, facebook: string, items: any } = { items: {}, about: '', twitter: '', facebook: '' };
@@ -19,19 +20,23 @@ export default class HomeStore {
     window.location.reload();
   }
 
-  @action crush = () => {
-    const body = toJS(this.form);
-
+  @action crush = async () => {
     if (!this.validateForm()) {
       return;
     }
-
+    this.form.crush = true;
+    const body = toJS(this.form);
+    await postMessage(body);
     this.reset();
   }
-  @action friend = () => {
+  
+  @action friend = async () => {
     if (!this.validateForm()) {
       return;
     }
+    this.form.friend = true;
+    const body = toJS(this.form);
+    await postMessage(body);
     this.reset();
   }
 
